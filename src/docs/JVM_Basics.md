@@ -1,7 +1,4 @@
 
----
-
-```markdown
 # JVM Basics
 
 ## What is JDK, JRE, JVM?
