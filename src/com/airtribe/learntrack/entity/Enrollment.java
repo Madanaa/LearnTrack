@@ -1,19 +1,18 @@
 package com.airtribe.learntrack.entity;
 
-
 import java.time.LocalDate;
 
 public class Enrollment {
-
     private int id;
     private int studentId;
     private int courseId;
     private LocalDate enrollmentDate;
-    private String status;
+    private EnrollmentStatus status;
 
-    public Enrollment() {}
+    public Enrollment() {
+    }
 
-    public Enrollment(int id, int studentId, int courseId, LocalDate enrollmentDate, String status) {
+    public Enrollment(int id, int studentId, int courseId, LocalDate enrollmentDate, EnrollmentStatus status) {
         this.id = id;
         this.studentId = studentId;
         this.courseId = courseId;
@@ -21,19 +20,38 @@ public class Enrollment {
         this.status = status;
     }
 
-    // Getter Setter
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() {
+        return id;
+    }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public int getCourseId() { return courseId; }
-    public void setCourseId(int courseId) { this.courseId = courseId; }
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public LocalDate getEnrollmentDate() { return enrollmentDate; }
-    public void setEnrollmentDate(LocalDate enrollmentDate) { this.enrollmentDate = enrollmentDate; }
 
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public EnrollmentStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(EnrollmentStatus status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Enrollment{id=" + id
+                + ", studentId=" + studentId
+                + ", courseId=" + courseId
+                + ", enrollmentDate=" + enrollmentDate
+                + ", status=" + status
+                + '}';
+    }
 }
