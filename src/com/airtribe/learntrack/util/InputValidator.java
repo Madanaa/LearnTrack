@@ -5,7 +5,6 @@ import com.airtribe.learntrack.exception.InvalidInputException;
 public final class InputValidator {
     private InputValidator() {
     }
-
     public static String requireNonBlank(String value, String fieldName) throws InvalidInputException {
         if (value == null || value.trim().isEmpty()) {
             throw new InvalidInputException(fieldName + " cannot be empty.");
